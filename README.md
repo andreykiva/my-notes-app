@@ -32,10 +32,10 @@ Contains the Electron-specific code for building and running the desktop applica
 Holds the React front-end code (renderer process) of the application. This is where the UI and business logic are implemented, using React, TypeScript, and other libraries.
 
 - `src/shared`
-This folder contains shared utilities, types, and constants used across both the Electron and React (renderer) processes. This is useful for code reusability and ensuring consistency throughout the app.
+This folder contains shared types and models used across both the Electron and React (renderer) processes. This is useful for code reusability and ensuring consistency throughout the app.
 
 - `src/__tests__`
-Contains unit and integration tests for the project. The tests are written using Vitest and React Testing Library to ensure the components and functionality work as expected.
+Contains unit tests for the project. The tests are written using Vitest and React Testing Library to ensure the components and functionality work as expected.
 
 ## 🚀 Getting Started
 Follow these instructions to get a local copy of the project up and running.
