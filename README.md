@@ -5,11 +5,11 @@
 
 ## ✨ Features
 - Welcome Screen: A friendly greeting on the first app launch with a button to "Create Your First Note."
-![My Notes App Demo](https://github.com/andreykiva/my-notes-app/src/renderer/assets/preview/create.gif)
+![My Notes App Demo](https://github.com/andreykiva/my-notes-app/blob/main/src/renderer/assets/preview/create.gif)
 - Create And Delete Notes: Easily create new notes and remove any note with a single click.
-![My Notes App Demo](https://github.com/andreykiva/my-notes-app/src/renderer/assets/preview/create_remove.gif)
+![My Notes App Demo](https://github.com/andreykiva/my-notes-app/blob/main/src/renderer/assets/preview/create_remove.gif)
 - Rich Text Editing: Fully customize the content of your notes by highlighting text, creating lists, adding code snippets, and more.
-![My Notes App Demo](https://github.com/andreykiva/my-notes-app/src/renderer/assets/preview/edit.gif)
+![My Notes App Demo](https://github.com/andreykiva/my-notes-app/blob/main/src/renderer/assets/preview/edit.gif)
 
 ## ⚙️ Tech Stack
 This project is built with the following technologies:
@@ -41,11 +41,11 @@ npm run start
 ## 🛠️ Scripts
 Here are the main commands for running, building, and testing the app:
 
-`npm start`: Starts the application in development mode using Electron.
-`npm run package`: Packages the application into an installable format.
-`npm run make`: Creates a distributable version of the app for different platforms.
-`npm run publish`: Publishes the packaged app (useful for deployment).
-`npm run lint`: Runs ESLint to check for code style and quality issues in .ts and .tsx files.
-`npm run test`: Runs unit tests using Vitest.
-`npm run test`:renderer: Runs renderer-specific tests with Vitest.
-`npm run test`:electron: Runs Electron-related tests with Vitest.
+- `npm start`: Starts the application in development mode using Electron.
+- `npm run package`: Packages the application into an installable format.
+- `npm run make`: Creates a distributable version of the app for different platforms.
+- `npm run publish`: Publishes the packaged app (useful for deployment).
+- `npm run lint`: Runs ESLint to check for code style and quality issues in .ts and .tsx files.
+- `npm run test`: Runs unit tests using Vitest.
+- `npm run test`:renderer: Runs renderer-specific tests with Vitest.
+- `npm run test`:electron: Runs Electron-related tests with Vitest.
