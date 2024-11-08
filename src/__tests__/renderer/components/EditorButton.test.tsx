@@ -21,7 +21,7 @@ describe("EditorButton Component", () => {
 	it("applies active styling when active prop is true", () => {
 		render(<EditorButton icon={mockIcon} active />);
 		const button = screen.getByRole("button");
-		expect(button).toHaveClass("bg-gray-300");
+		expect(button).toHaveClass("bg-gray-600");
 	});
 
 	it("is disabled when the disabled prop is true", () => {
