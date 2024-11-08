@@ -38,6 +38,8 @@ This folder contains shared types and models used across both the Electron and R
 Contains unit tests for the project. The tests are written using Vitest and React Testing Library to ensure the components and functionality work as expected.
 
 ## 🏗️ Architecture
+
+### Electron
 1. Preload Script (`preload.ts`)
 Sets up a secure bridge between the main and renderer processes using contextBridge.
 Exposes methods:
@@ -79,6 +81,21 @@ Main Process: Listens for these messages and interacts with the `notes.json` fil
 8. Security
 Context Isolation and Node Integration Disabled: Protects the renderer process from direct access to Node.js.
 Sandboxing: Further restricts the renderer process’s privileges.
+
+### React
+
+1. React manages the UI with state and effects (e.g., `App.tsx`, `NotesContainer.tsx`).
+
+2. Context API is used for state management (`NotesContext`), with a custom hook (`useNotes`) for handling notes operations like creating, updating, and deleting notes.
+
+3. Notes are persisted via API calls to Electron's API (`notesService.ts`).
+
+4. Tiptap editor allows rich text editing within notes.
+
+Key custom hooks include:
+
+- `useNotes` for managing note-related state.
+- `useDebouncedSave` for saving notes after a delay.
 
 ## 🚀 Getting Started
 Follow these instructions to get a local copy of the project up and running.
