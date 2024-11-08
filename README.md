@@ -37,6 +37,49 @@ This folder contains shared types and models used across both the Electron and R
 - `src/__tests__`
 Contains unit tests for the project. The tests are written using Vitest and React Testing Library to ensure the components and functionality work as expected.
 
+## 🏗️ Architecture
+1. Preload Script (`preload.ts`)
+Sets up a secure bridge between the main and renderer processes using contextBridge.
+Exposes methods:
+- `getNotes`: Fetches notes.
+- `saveNotes`: Saves notes.
+
+2. Global Declaration for window Object (`preload.global.d.ts`)
+Declares types for methods available through `window.api` in the renderer process.
+Provides type safety for getNotes and saveNotes.
+
+3. Main Process (`main.ts`)
+Manages window creation and the app's lifecycle.
+Handles IPC calls for loading and saving notes:
+- `get-notes`: Loads notes.
+- `save-notes`: Saves notes.
+Enforces strict security settings (`contextIsolation, sandbox`).
+
+4. IPC Communication
+The renderer process calls methods through IPC (`ipcRenderer.invoke`).
+The main process listens for these calls using `ipcMain.handle` and interacts with the notes file.
+
+5. File Operations (`lib/index.ts`)
+Reads and writes notes to a notes.json file in the user’s data directory.
+Functions:
+- `ensureFile`: Creates the file if it doesn’t exist.
+- `loadNotes`: Reads notes.
+- `saveNotes`: Saves notes.
+
+6. Shared Types (types and models)
+Types for safe interaction with notes:
+- `GetNotes`: Function to fetch notes.
+- `SaveNotes`: Function to save notes.
+Note: Model for a note (id, title, content).
+
+7. How It All Works
+Renderer Process: Calls `window.api.getNotes()` or `window.api.saveNotes()`, which sends IPC messages to the main process.
+Main Process: Listens for these messages and interacts with the `notes.json` file to read/save data.
+
+8. Security
+Context Isolation and Node Integration Disabled: Protects the renderer process from direct access to Node.js.
+Sandboxing: Further restricts the renderer process’s privileges.
+
 ## 🚀 Getting Started
 Follow these instructions to get a local copy of the project up and running.
 
@@ -61,6 +104,6 @@ Here are the main commands for running, building, and testing the app:
 - `npm run make`: Creates a distributable version of the app for different platforms.
 - `npm run publish`: Publishes the packaged app (useful for deployment).
 - `npm run lint`: Runs ESLint to check for code style and quality issues in .ts and .tsx files.
-- `npm run test`: Runs unit tests using Vitest.
-- `npm run test`:renderer: Runs renderer-specific tests with Vitest.
-- `npm run test`:electron: Runs Electron-related tests with Vitest.
+- `npm run test`: Runs all tests using Vitest and React Testing Library.
+- `npm run test:renderer`: Runs renderer-specific tests with Vitest and React Testing Library.
+- `npm run test:electron`: Runs Electron-related tests with Vitest.
