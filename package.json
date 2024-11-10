@@ -51,6 +51,7 @@
 	},
 	"license": "MIT",
 	"dependencies": {
+		"@tiptap/extension-image": "^2.9.1",
 		"@tiptap/react": "^2.9.1",
 		"@tiptap/starter-kit": "^2.9.1",
 		"electron-squirrel-startup": "^1.0.1",
