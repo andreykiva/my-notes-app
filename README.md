@@ -11,7 +11,7 @@
 - Rich Text Editing: Fully customize the content of your notes by highlighting text, creating lists, adding code snippets, and more.
 ![My Notes App Demo](https://github.com/andreykiva/my-notes-app/blob/main/src/renderer/assets/preview/edit.gif)
 - Embed Images in Notes: Personalize your notes by inserting images directly, enriching content with visuals and enhancing clarity.
-![My Notes App Demo](https://github.com/andreykiva/my-notes-app/blob/main/src/renderer/assets/preview/embed-images.gif)
+![My Notes App Demo](https://github.com/andreykiva/my-notes-app/blob/main/src/renderer/assets/preview/embed_images.gif)
 
 ## ⚙️ Tech Stack
 This project is built with the following technologies:
