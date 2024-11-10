@@ -1,5 +1,6 @@
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
+import Image from "@tiptap/extension-image";
 import { Note as NoteType } from "@shared/models";
 import EditorButtonsList from "./EditorButtonsList";
 
@@ -20,6 +21,9 @@ const Note = ({ note, onRemove, onUpdate }: NoteProps) => {
 				orderedList: {
 					keepMarks: true, // Preserve text formatting within ordered list items
 				},
+			}),
+			Image.configure({
+				inline: true,
 			}),
 		],
 		content: note.content, // Set the editor's initial content to the note's content
