@@ -10,6 +10,8 @@
 ![My Notes App Demo](https://github.com/andreykiva/my-notes-app/blob/main/src/renderer/assets/preview/create_remove.gif)
 - Rich Text Editing: Fully customize the content of your notes by highlighting text, creating lists, adding code snippets, and more.
 ![My Notes App Demo](https://github.com/andreykiva/my-notes-app/blob/main/src/renderer/assets/preview/edit.gif)
+- Embed Images in Notes: Personalize your notes by inserting images directly, enriching content with visuals and enhancing clarity.
+![My Notes App Demo](https://github.com/andreykiva/my-notes-app/blob/main/src/renderer/assets/preview/embed-images.gif)
 
 ## ⚙️ Tech Stack
 This project is built with the following technologies:
@@ -19,7 +21,7 @@ This project is built with the following technologies:
 - Electron: A framework for building cross-platform desktop apps using web technologies (HTML, CSS, JavaScript).
 - electron-forge: A tool for managing the Electron app's build and packaging process, streamlining the app's deployment.
 - Tailwind CSS: A utility-first CSS framework for styling the app, making it easy to design and maintain a clean, responsive layout.
-- Tiptap React: A rich-text editor for React, providing powerful features for editing content (such as lists, code, etc.) within notes.
+- Tiptap React: A rich-text editor for React, providing powerful features for editing content (such as lists, images, code, etc.) within notes.
 - Vitest & React Testing Library: Tools for unit testing and ensuring the app’s components work as expected, with Vitest for fast test execution and React Testing Library for component-based tests.
 
 ## 🧭 Project Structure
