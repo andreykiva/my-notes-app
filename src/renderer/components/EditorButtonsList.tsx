@@ -12,6 +12,7 @@ import codeIcon from "../assets/icons/code.svg";
 import horizontalIcon from "../assets/icons/horizontal.svg";
 import undoIcon from "../assets/icons/undo.svg";
 import redoIcon from "../assets/icons/redo.svg";
+import ImageUploader from "./ImageUploader";
 
 type EditorButtonsListProps = {
 	editor: Editor; // The TipTap editor instance to interact with
@@ -20,7 +21,7 @@ type EditorButtonsListProps = {
 // EditorButtonsList component for rendering a set of toolbar buttons
 const EditorButtonsList = ({ editor }: EditorButtonsListProps) => {
 	return (
-		<div className="flex px-4 py-2 gap-2 border-b border-gray-300">
+		<div className="relative flex px-4 py-2 gap-2 border-b border-gray-300">
 			{/* Bold Button */}
 			<EditorButton
 				onClick={() => editor.chain().focus().toggleBold().run()}
@@ -54,6 +55,8 @@ const EditorButtonsList = ({ editor }: EditorButtonsListProps) => {
 				active={editor.isActive("heading", { level: 2 })}
 				icon={textH2Icon}
 			/>
+			{/* Image Uploader*/}
+			<ImageUploader editor={editor} />
 			{/* Bullet List Button */}
 			<EditorButton
 				onClick={() => editor.chain().focus().toggleBulletList().run()}
